@@ -1,5 +1,5 @@
 LAST LOGIN SCRIPT : 
-!/bin/bash
+#!/bin/bash
 # Check if the script is being run as root
 if [ "$EUID" -ne 0 ]; then
     echo "Please run this script as root"
@@ -8,6 +8,63 @@ fi
 
 echo "Last login details:"
 last
+
+
+EXPERIMENT 7 TASKS  
+1.WHICHBASH AND SHELL :  
+vboxuser@UBUNTU:~$ which bash
+vboxuser@UBUNTU:~$ cat /etc/shells
+
+TASK 1 ODD OR EVEN 
+#!/bin/bash
+read -p "Enter a number: " num
+if [ $((num % 2)) -eq 0 ]; then
+    echo "$num is even."
+else
+    echo "$num is odd."
+fi
+
+TASK 2 FACTORIAL OF NUMBER 
+#!/bin/bash
+echo "Enter a number:"
+read num
+factorial=1
+for ((i=1; i<=num; i++)); do
+    factorial=$((factorial * i))
+done
+echo "Factorial of $num is $factorial."
+
+TASK 3 PALINDROME 
+#!/bin/bash
+echo "Enter a string:"
+read input_string
+# Reverse the string
+reversed_string=$(echo "$input_string" | rev)
+# Check if the original string is equal to the reversed string
+if [ "$input_string" = "$reversed_string" ]; then
+    echo "Palindrome"
+else
+    echo "Not a Palindrome"
+fi
+
+TASK 4 fibonnacci series
+#!/bin/bash
+c=2
+a=1
+b=1
+d=0
+echo  "enter the number of elements"
+read n
+echo "$a"
+echo "$b"
+while((c<n))
+do
+d=$((a+b))
+echo "$d"
+a=$b
+b=$d
+c=$((c+1))
+done
 
 
 
