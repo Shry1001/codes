@@ -1,0 +1,15 @@
+TRAIN :sudo apt install sl 
+COWSAY : sudo apt install xcowsay
+BASTET GAME : sudo apt install bastet
+ALias COMMAND :  alias m='ls'
+Unalias COMMAND : unalias m="ls"
+
+WHICH PYTHON : which python3
+addition using python   : python3      3+3
+
+
+to make python script :  vi file1.py <<<<< #!/usr/bin/python    print("shreyas patil") 
+to run script : python3 file1.py
+
+Install Curl : sudo apt install curl 
+weather command : curl wttr.in/delhi 
