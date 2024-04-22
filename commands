@@ -67,4 +67,27 @@ c=$((c+1))
 done
 
 
+to add ownership use sudo chmod 777(readwriteexecute)(421)
+
+#RECURSSIVE FILE CHANGE : 
+touch file1 file2 file3
+sudo chmod 777 file1 file2 file3
+
+#CHANGE OWNER SHIP :
+SUDO CHOWN SHREY1 FILE1
+ls -l
+
+#REMOVE FILE 
+SUDO RM FILE1
+
+
+#TO ADD USER 
+SUDO ADDUSER SHREY1
+
+#TO CREATE GROUP 
+SUDO ADDGROUP STUDENTS
+
+#TO DELETE USER
+#SUDO DELUSER SHREY1
+
 
