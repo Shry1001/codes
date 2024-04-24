@@ -10,6 +10,11 @@ echo "Last login details:"
 last
 
 
+%ADDING HOSST AND IP ADDRESS
+#!/bin/bash
+read -p "Enter host:" hostname
+read -p "Enter IP address of the host:" ip sed -L.bkp'$ a Shostname $ip" /etc/hosts
+
 EXPERIMENT 7 TASKS  
 1.WHICHBASH AND SHELL :  
 vboxuser@UBUNTU:~$ which bash
