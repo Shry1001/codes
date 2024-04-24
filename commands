@@ -91,3 +91,82 @@ SUDO ADDGROUP STUDENTS
 #SUDO DELUSER SHREY1
 
 
+
+
+
+
+
+#commands
+
+	1.	User Management:
+	•	useradd: Add a new user.
+	•	passwd: Change user password.
+	•	usermod: Modify user account.
+	•	userdel: Delete a user account.
+	2.	Process Management:
+	•	ps: Display information about active processes.
+	•	top: Display and update sorted information about processes.
+	•	kill: Terminate processes.
+	•	killall: Terminate processes by name.
+	3.	File Management:
+	•	ls: List directory contents.
+	•	cp: Copy files and directories.
+	•	mv: Move or rename files and directories.
+	•	rm: Remove files or directories.
+	4.	System Configuration:
+	•	ifconfig: Configure network interfaces.
+	•	iptables: Configure firewall rules.
+	•	hostname: Set or view hostname.
+
+Sure, here are all the commands for user management in Linux:
+
+1. **Add Group:**
+   ```bash
+   sudo groupadd <groupname>
+   ```
+
+2. **Add User:**
+   ```bash
+   sudo useradd -m -G <groupname> <username>
+   ```
+   `-m` creates the user's home directory, and `-G` adds the user to a supplementary group.
+
+3. **Check User Created:**
+   ```bash
+   id <username>
+   ```
+   This command displays information about the specified user, including their UID (user ID) and groups.
+
+4. **Grant Sudo Privileges:**
+   - First, open the sudoers file for editing:
+     ```bash
+     sudo visudo
+     ```
+   - Add a line to grant sudo privileges to the user. For example:
+     ```bash
+     <username> ALL=(ALL:ALL) ALL
+     ```
+     This line grants the user `username` sudo privileges for all commands.
+
+5. **Change User Password:**
+   ```bash
+   sudo passwd <username>
+   ```
+   This command allows you to change the password for the specified user.
+
+6. **Modify User Account:**
+   ```bash
+   sudo usermod -aG <additional_group> <username>
+   ```
+   This command adds the user to an additional group.
+
+7. **Delete User Account:**
+   ```bash
+   sudo userdel -r <username>
+   ```
+   `-r` removes the user's home directory and mail spool.
+
+Remember to replace `<groupname>` and `<username>` with the actual names of the group and user you want to create or modify. Use these commands carefully, especially when dealing with system-level configurations.
+
+
+
