@@ -16,6 +16,17 @@ read -p "Enter host:" hostname
 read -p "Enter IP address of the host:" ip 
 sed -i.bkp"$ a Shostname $ip" /etc/hosts
 
+
+#UPGRADE AND CLEAN
+#!/bin/bash
+#if not root, run as root if ((4EUID 1=0)); then
+sudo /home/jb/bash/extra.sh
+exit
+fi
+apt-get update
+apt-get -y upgrade apt-get - y dist-upgrade apt-get clean
+apt-get -y autoremove
+
 EXPERIMENT 7 TASKS  
 1.WHICHBASH AND SHELL :  
 vboxuser@UBUNTU:~$ which bash
